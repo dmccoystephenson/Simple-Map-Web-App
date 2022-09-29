@@ -1,14 +1,15 @@
+import React, { Component } from 'react';
 import './App.css';
+import MapView from './map/MapView.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h2>Simple Map Web App</h2>
-        <p>(map goes here)</p>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <body>
+        {< MapView />}
+      </body>
+    );
+  }
 }
 
 export default App;

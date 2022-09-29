@@ -1,9 +1,11 @@
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>Simple Map Web App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>Simple Web App</title>
 
+    <!-- The height of the centered-horizontally class is hard-coded to 500px at this time. If it's not manually set then the map doesn't show up. -->
     <style>
       #mapViewDiv {
         padding: 0;
@@ -13,6 +15,7 @@
       }
       .centered-horizontally {
         text-align: center;
+        height: 500px;
       }
     </style>
 
@@ -21,6 +24,7 @@
     <script src="https://js.arcgis.com/4.24/"></script>
 
     <script>
+      /* We might need to move this to a different file. Right now the map doesn't render unless this file is re-saved.*/
       require(["esri/views/MapView", "esri/WebMap"], (MapView, WebMap) => {
         /************************************************************
          * Creates a new WebMap instance. A WebMap must reference
@@ -46,13 +50,19 @@
         });
       });
     </script>
-  </head>
 
+  </head>
   <body>
-    <div class="centered-horizontally">
-      <h1>Map View</h1>
-      <div id="mapViewDiv"></div>
-      <p>This is a map, the source for which can be found <a href="https://developers.arcgis.com/javascript/latest/sample-code/webmap-basic/">here</a>.</p>
-    </div>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start`.
+      To create a production bundle, use `npm run build`.
+    -->
   </body>
 </html>
