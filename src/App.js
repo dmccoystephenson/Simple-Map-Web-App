@@ -1,14 +1,18 @@
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h2>Simple Map Web App</h2>
-        <p>(map goes here)</p>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <body>
+        <div class="centered-horizontally">
+          <h1>Map View</h1>
+          <div id="mapViewDiv"></div>
+          <p>This is a map, the source for which can be found <a href="https://developers.arcgis.com/javascript/latest/sample-code/webmap-basic/">here</a>.</p>
+        </div>
+      </body>
+    );
+  }
 }
 
 export default App;
