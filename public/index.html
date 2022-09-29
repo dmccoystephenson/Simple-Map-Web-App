@@ -30,11 +30,10 @@
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css" />
 
-    
     <script src="https://js.arcgis.com/4.24/"></script>
 
     <script>
-      /* We might need to move this to a different file. */
+      /* We might need to move this to a different file. Right now the map doesn't render unless this file is re-saved.*/
       require(["esri/views/MapView", "esri/WebMap"], (MapView, WebMap) => {
         /************************************************************
          * Creates a new WebMap instance. A WebMap must reference
